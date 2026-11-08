@@ -1,0 +1,16 @@
+name: Ejercicio 6 automatización
+on:
+  workflow_dispatch:
+    inputs:
+      mensaje:
+        description: 'Mensaje de texto para imprimir por consola'
+        required: true
+        type: string
+        default: ''
+     
+jobs:
+  imprimir_mensaje:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Mensaje de texto
+        run: echo "${{ inputs.mensaje }}"
